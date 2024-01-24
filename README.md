@@ -1,8 +1,8 @@
 ---
  # Bandit
----
+
  
-This repo consists data and steps required to solve Bandit problems.
+This repo consists of data and steps required to solve Bandit problems.
 
 ---
 
