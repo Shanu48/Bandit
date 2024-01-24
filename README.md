@@ -37,6 +37,9 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 
 ![image](https://github.com/Shanu48/Bandit/assets/149718849/e6acbc3d-30b2-44f9-88a9-6764a71c39b0)
 
+Enter the givenn password: bandit0
+** Note ** - Bandit does not show you the password while typing nor does it move the coursor.
+
 Password obtained:
 ```
 
