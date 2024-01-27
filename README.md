@@ -36,7 +36,7 @@ ssh bandit0@bandit.labs.overthewire.org -p 2220
 
 Enter the givenn password: bandit0
 
-** Note ** - Bandit does not show you the password while typing nor does it move the coursor.
+** Note ** - Bandit does not show you the password while typing nor does it move the cursor.
 
 To enter into a level you need to exit the previous one with the help of ```exit -d``` command.
 
