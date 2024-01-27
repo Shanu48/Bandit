@@ -20,9 +20,6 @@ The aim of the game is to use various commands and obtain the password to enter 
 #### Level goal
 The goal of this level is for you to log into the game using SSH. The host to which you need to connect is bandit.labs.overthewire.org, on port 2220. The username is bandit0 and the password is bandit0. Once logged in, go to the Level 1 page to find out how to beat Level 1.
 
-#### Commands required
-```**SSH-**``` The Secure Shell (SSH) protocol is a method for securely sending commands to a computer over an unsecured network. SSH uses cryptography to authenticate and encrypt connections between devices.
-
 #### Solution
 The SSH command is used to enter the level zero.
 Given : 
@@ -47,10 +44,6 @@ To enter into a level you need to exit the previous one with the help of ```exit
 ## Level 0 -> Level 1
 #### Level Goal
 The password for the next level is stored in a file called readme located in the home directory. Use this password to log into bandit1 using SSH. Whenever you find a password for a level, use SSH (on port 2220) to log into that level and continue the game.
-
-#### Commands Required
-```ls```
-```cat```
 
 #### Solution
 We need to open a file called ```readme``` which is located in a directory called ```home```
@@ -79,9 +72,6 @@ NH2SXQwcBdpmTEzi3bvBHMM9H66vVXjL
 #### Level Goal
 The password for the next level is stored in a file called - located in the home directory
 
-#### Commands Required
-ls
-cat ./<filename>
 #### Solution
 Since the file name is ```-```, it con't be opened directly with the ```cat``` command
 Step 1: Lets first check all the files that are available
@@ -106,9 +96,6 @@ rRGizSaX8Mk1RTb1CNQoXTcYZWU6lgzi
 #### Level Goal
 The password for the next level is stored in a file called spaces in this filename located in the home directory
 
-#### Commands Required
-ls
-cat ./"<File name>
 #### Solution
 Step 1: Lets first check all the files that are available
 ```
@@ -135,10 +122,6 @@ If the name of the file is written without the quotations, the terminal consider
 #### Level Goal
 The password for the next level is stored in a hidden file in the inhere directory.
 
-#### Commands Required
-ls
-cd
-dir -a
 #### Solution
 Step 1: Lets first check all the files that are available
 ```
@@ -175,8 +158,6 @@ Here's the password. Copy or store it somewhere to use later
 #### Level Goal
 The password for the next level is stored in the only human-readable file in the inhere directory. Tip: if your terminal is messed up, try the “reset” command.
 
-#### Commands Required
-
 #### Solution
 Step 1: Lets first check all the files or directories that are available
 ```
@@ -199,8 +180,6 @@ The password for the next level is stored in a file somewhere under the inhere d
 human-readable
 1033 bytes in size
 not executable
-
-#### Commands Required
 
 #### Solution
 
@@ -235,8 +214,6 @@ owned by user bandit7
 owned by group bandit6
 33 bytes in size
 
-#### Commands Required
-
 #### Solution
 
 Step 1: This time we have to find a file that is on the server.
@@ -266,31 +243,7 @@ z7WtoNQU2XfjmMtWA8u5rN4vzqu4v99S
 ---
 ## Level 7 -> Level 8
 #### Level Goal
-
-#### Commands Required
-
-#### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
-
-Here's the password. Copy or store it somewhere to use later
-```
-
-```
-
----
-## Level  -> Level 
-#### Level Goal
-
-#### Commands Required
+The password for the next level is stored in the file data.txt next to the word millionth
 
 #### Solution
 
@@ -301,19 +254,25 @@ ls
 
 Step 2: Lets open the file
 ```
+cat data.txt
+```
 
+Step 3: Its a huge file so it will take a long time to search. 
+
+Its given that, the password is stored next to the word "millionth"
+```
+grep "millionth" "data.txt"
 ```
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+TESKZC0XvTetK0S9xNwm25STk5iWrBvP
 ```
 
 ---
-## Level  -> Level 
+## Level 8 -> Level 9
 #### Level Goal
-
-#### Commands Required
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once
 
 #### Solution
 
@@ -322,67 +281,86 @@ Step 1: Lets first check all the files that are available
 ls
 ```
 
-Step 2: Lets open the file
-```
+Step 2: This is a huge file. 
 
+Its given that the password is the file that occurs only ones. 
+
+So, we need to remove the repeating lines. First we need to sort the lines and then find the unique line
+```
+cat data.txt | sort | uniq
 ```
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+EN632PlfYiZbn3PhVK3XOGSlNInNE00t
 ```
 
 ---
-## Level  -> Level 
+## Level 9 -> Level 10
 #### Level Goal
-
-#### Commands Required
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
 
 #### Solution
 
-Step 1: Lets first check all the files that are available
-```
-ls
-```
+The password is in a human readable file preceded by ```=``` characters
 
-Step 2: Lets open the file
-```
+Its mostly binary. We need only strings preceded by ```=```
 
+Lets open the file
 ```
+strings data.txt | grep "="
+```
+![image](https://github.com/Shanu48/Bandit/assets/149718849/d64b0d81-6b6f-40f3-8d40-fe43d09f08c3)
+
+Our password is the string preceded by lots of ```=```
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+G7w8LIi6J3kTb8A7j9LgrywtEUlyyp6s
 ```
 
 ---
-## Level  -> Level 
+## Level 10 -> Level 11
 #### Level Goal
-
-#### Commands Required
+The password for the next level is stored in the file data.txt, which contains base64 encoded data
 
 #### Solution
 
-Step 1: Lets first check all the files that are available
+The file has base64 encoder. Let decode it and open the file
 ```
-ls
-```
-
-Step 2: Lets open the file
-```
-
+cat data.txt | base64 --decode
 ```
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+6zPeziLdR2RKNdNYFNb6nVCKzphlXHBM
 ```
 
 ---
-## Level  -> Level 
+## Level 11 -> Level 12
 #### Level Goal
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
 
-#### Commands Required
+#### Solution
+
+This is the command to rotate a string my 13 positions
+```
+cat data.txt | tr 'a-z' 'n-za-m' | tr 'A-Z' 'N-ZA-M'
+```
+
+But, our srting is already rotated. We need it back
+```
+cat data.txt | tr 'n-za-m' 'a-z' | tr 'N-ZA-M' 'A-Z'
+```
+
+Here's the password. Copy or store it somewhere to use later
+```
+JVNBBFSmZwKKOP0XbFXOoW8chDz5yVRv
+```
+
+---
+## Level 12 -> Level 13
+#### Level Goal
 
 #### Solution
 
