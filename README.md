@@ -393,41 +393,42 @@ xxd -r data.txt >data
 Frequently check the type and compression of the newly created file to know the next step
 
 
-For a gzip file:
+**For a gzip file:**
 
-Create a file with .gz extention ```mv <oldfilename> <newfilename>.gz```
+1. Create a file with .gz extention ```mv <oldfilename> <newfilename>.gz```
 
-To unzip it ```gzip -d <newfilename>.gz```
+2. To unzip it ```gzip -d <newfilename>.gz```
 
-New file can be seen ```newfilename```
-
-
-For a bzip2 file:
-
-Create a new file with .bz extention ```mv <newfilename> <newfilename2>.bz```
-
-Open it using ```bzip2 -d <newfilename2>.bz```
-
-Info about a new data file will be given. This is a .bin file
-
-Create a new file using .gz
+3. New file can be seen ```newfilename```
 
 
-For a gzip .bin file:
+**For a bzip2 file:**
 
-Use ```gzip -d <newfilename>.gz```
+1. Create a new file with .bz extention ```mv <newfilename> <newfilename2>.bz```
 
-Its file type now is ```tar```
+2. Open it using ```bzip2 -d <newfilename2>.bz```
 
-Create a new file using .tar
+3. Info about a new data file will be given. This is a .bin file
 
-Open it using ```tar -xf <newfilename>.tar```
+4. Create a new file using .gz
 
-It will create a .bin file
 
-Move it to a new .tar file
+**For a gzip .bin file:**
 
-Open it accordingly
+1. Use ```gzip -d <newfilename>.gz```
+
+2. Its file type now is ```tar```
+
+3. Create a new file using .tar
+
+4. Open it using ```tar -xf <newfilename>.tar```
+
+5. It will create a .bin file
+
+6. Move it to a new .tar file
+
+7. Open it accordingly
+
 
 
 Stop once the file type is ```ASCII text```
