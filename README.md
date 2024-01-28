@@ -439,22 +439,11 @@ wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 ```
 
 ---
-## Level  -> Level 
+## Level 13 -> Level 14
 #### Level Goal
-
-#### Commands Required
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. Note: localhost is a hostname that refers to the machine you are working on
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -462,22 +451,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 14 -> Level 15
 #### Level Goal
-
-#### Commands Required
+The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -485,22 +463,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 15 -> Level 16
 #### Level Goal
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption.
 
-#### Commands Required
+Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -508,22 +477,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 16 -> Level 17
 #### Level Goal
-
-#### Commands Required
+The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000. First find out which of these ports have a server listening on them. Then find out which of those speak SSL and which don’t. There is only 1 server that will give the next credentials, the others will simply send back to you whatever you send to it.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -531,22 +489,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 17 -> Level 18
 #### Level Goal
+There are 2 files in the homedirectory: passwords.old and passwords.new. The password for the next level is in passwords.new and is the only line that has been changed between passwords.old and passwords.new
 
-#### Commands Required
+NOTE: if you have solved this level and see ‘Byebye!’ when trying to log into bandit18, this is related to the next level, bandit19
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -554,22 +503,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 18 -> Level 19
 #### Level Goal
-
-#### Commands Required
+The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -577,22 +515,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 19 -> Level 20
 #### Level Goal
-
-#### Commands Required
+To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -600,22 +527,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 20 -> Level 21
 #### Level Goal
+There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21).
 
-#### Commands Required
+NOTE: Try connecting to your own network daemon to see if it works as you think
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -623,22 +541,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 21 -> Level 22
 #### Level Goal
-
-#### Commands Required
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -646,22 +553,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 22 -> Level 23
 #### Level Goal
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 
-#### Commands Required
+NOTE: Looking at shell scripts written by other people is a very useful skill. The script for this level is intentionally made easy to read. If you are having problems understanding what it does, try executing it to see the debug information it prints.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -669,22 +567,15 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 23 -> Level 24
 #### Level Goal
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed.
 
-#### Commands Required
+NOTE: This level requires you to create your own first shell-script. This is a very big step and you should be proud of yourself when you beat this level!
+
+NOTE 2: Keep in mind that your shell script is removed once executed, so you may want to keep a copy around…
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -692,22 +583,12 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 24 -> Level 25
 #### Level Goal
-
-#### Commands Required
+A daemon is listening on port 30002 and will give you the password for bandit25 if given the password for bandit24 and a secret numeric 4-digit pincode. There is no way to retrieve the pincode except by going through all of the 10000 combinations, called brute-forcing.
+You do not need to create new connections each time
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -715,22 +596,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 25 -> Level 26
 #### Level Goal
-
-#### Commands Required
+Logging in to bandit26 from bandit25 should be fairly easy… The shell for user bandit26 is not /bin/bash, but something else. Find out what it is, how it works and how to break out of it.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -738,22 +608,11 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 26 -> Level 27
 #### Level Goal
-
-#### Commands Required
+Good job getting a shell! Now hurry and grab the password for bandit27!
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -761,22 +620,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 27 -> Level 28
 #### Level Goal
+There is a git repository at ssh://bandit27-git@localhost/home/bandit27-git/repo via the port 2220. The password for the user bandit27-git is the same as for the user bandit27.
 
-#### Commands Required
+Clone the repository and find the password for the next level.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -784,22 +634,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 28 -> Level 29
 #### Level Goal
+There is a git repository at ssh://bandit28-git@localhost/home/bandit28-git/repo via the port 2220. The password for the user bandit28-git is the same as for the user bandit28.
 
-#### Commands Required
+Clone the repository and find the password for the next level.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -807,22 +648,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 29 -> Level 30
 #### Level Goal
+There is a git repository at ssh://bandit29-git@localhost/home/bandit29-git/repo via the port 2220. The password for the user bandit29-git is the same as for the user bandit29.
 
-#### Commands Required
+Clone the repository and find the password for the next level.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -830,22 +662,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 30 -> Level 31
 #### Level Goal
+There is a git repository at ssh://bandit30-git@localhost/home/bandit30-git/repo via the port 2220. The password for the user bandit30-git is the same as for the user bandit30.
 
-#### Commands Required
+Clone the repository and find the password for the next level.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -853,22 +676,13 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 31 -> Level 32
 #### Level Goal
+There is a git repository at ssh://bandit31-git@localhost/home/bandit31-git/repo via the port 2220. The password for the user bandit31-git is the same as for the user bandit31.
 
-#### Commands Required
+Clone the repository and find the password for the next level.
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
@@ -876,24 +690,18 @@ Here's the password. Copy or store it somewhere to use later
 ```
 
 ---
-## Level  -> Level 
+## Level 32 -> Level 33
 #### Level Goal
-
-#### Commands Required
+After all this git stuff its time for another escape. Good luck!
 
 #### Solution
-
-Step 1: Lets first check all the files that are available
-```
-ls
-```
-
-Step 2: Lets open the file
-```
-
-```
 
 Here's the password. Copy or store it somewhere to use later
 ```
 
 ```
+
+---
+## Level 33 -> Level 34
+#### Level Goal
+At this moment, level 34 does not exist yet.
