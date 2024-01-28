@@ -365,19 +365,76 @@ The password for the next level is stored in the file data.txt, which is a hexdu
 
 #### Solution
 
-Step 1: Lets first check all the files that are available
+The file has been compressed multiple times. It had been suggested that we decompress is while putting it in a new file.
+
+Step 1: Lets make a folder named tmp and in it lv12
 ```
-ls
+mkdir /tmp/lv12
 ```
 
-Step 2: Lets open the file
+Step 2: Lets copy data.txt in this newly created folder
+```
+cp data.txt /tmp/lv12
 ```
 
+Step 3: Get into this floder
+```
+cd /tmp/lv12
 ```
 
-Here's the password. Copy or store it somewhere to use later
+To check the type or encoding of the file use ```file <filename>``` command
+
+Step 4: ```data.txt``` is a hex file so we need to convert it
+```
+xxd -r data.txt >data
 ```
 
+
+Frequently check the type and compression of the newly created file to know the next step
+
+
+For a gzip file:
+
+Create a file with .gz extention ```mv <oldfilename> <newfilename>.gz```
+
+To unzip it ```gzip -d <newfilename>.gz```
+
+New file can be seen ```newfilename```
+
+
+For a bzip2 file:
+
+Create a new file with .bz extention ```mv <newfilename> <newfilename2>.bz```
+
+Open it using ```bzip2 -d <newfilename2>.bz```
+
+Info about a new data file will be given. This is a .bin file
+
+Create a new file using .gz
+
+
+For a gzip .bin file:
+
+Use ```gzip -d <newfilename>.gz```
+
+Its file type now is ```tar```
+
+Create a new file using .tar
+
+Open it using ```tar -xf <newfilename>.tar```
+
+It will create a .bin file
+
+Move it to a new .tar file
+
+Open it accordingly
+
+
+Stop once the file type is ```ASCII text```
+
+Here lies the password
+```
+wbWdlBxEir4CaE8LaPhauuOo6pwRmrDw
 ```
 
 ---
