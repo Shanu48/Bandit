@@ -445,9 +445,21 @@ The password for the next level is stored in /etc/bandit_pass/bandit14 and can o
 
 #### Solution
 
-Here's the password. Copy or store it somewhere to use later
+We need to enter bandit14 through bandit13
+```
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
 ```
 
+Its told that the password is in ```/etc/bandit_pass/bandit14```
+
+Lets open it up
+```
+cat /etc/bandit_pass/bandit14
+```
+
+Here's the password. Copy or store it somewhere to use later
+```
+fGrHPx402xGC7U7rXKDaxiWFTOiF0ENq
 ```
 
 ---
@@ -456,10 +468,15 @@ Here's the password. Copy or store it somewhere to use later
 The password for the next level can be retrieved by submitting the password of the current level to port 30000 on localhost.
 
 #### Solution
+We need to connect to the localhost 30000 and prompt the shell using the password retrived in previous level
+```
+nc localhost 30000
+```
+Press enter and provide the password obtained in the previous level
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+jN2kgmIXJ6fShzhT2avhotn4Zcka6tnt
 ```
 
 ---
@@ -470,10 +487,20 @@ The password for the next level can be retrieved by submitting the password of t
 Helpful note: Getting “HEARTBEATING” and “Read R BLOCK”? Use -ign_eof and read the “CONNECTED COMMANDS” section in the manpage. Next to ‘R’ and ‘Q’, the ‘B’ command also works in this version of that command…
 
 #### Solution
+OpenSSL is a library for secure communication over networks. It implements the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) cryptographic protocols that are, for example, used in HTTPS to secure the web traffic.
+
+openssl s_client is the implementation of a simple client that connects to a server using SSL/TLS.
+
+We need ssl encryption
+```
+openssl s_client -connect localhost:30001
+```
+
+Press enter and provide the password obtained in the previous level
 
 Here's the password. Copy or store it somewhere to use later
 ```
-
+JQttfApK4SeyHwDlI9SXGR50qclOAil1
 ```
 
 ---
