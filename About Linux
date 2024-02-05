@@ -33,3 +33,8 @@ Tells you the path of the directory
 mv
 ```
 ```mv <source> <destination>``` is used to move a file from source to destination
+```
+man
+```
+Stands for manual.
+```man <command> provides you the details and ooptions related to the command
