@@ -38,3 +38,9 @@ man
 ```
 Stands for manual.
 ```man <command> provides you the details and ooptions related to the command
+```<action> > <file>``` directs the oputput to the file
+```ls -a``` 
+```-a``` is an attribute which enables us to see the hidden files too
+```>>``` appends the data to the file
+Piping
+the ooutput of one command becomes the input of the next
