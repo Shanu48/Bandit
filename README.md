@@ -529,9 +529,39 @@ PORT      STATE SERVICE
 ```
 Its port ```31790```
 
-Here's the password. Copy or store it somewhere to use later
+We need to store this private key somewhere. Bandit won't allow us to create a new file. So lets store it in the tmp file.
+```
+mkdir /tmp/private
 ```
 
+The folder has been created. Now lets create a file to store the key. The ```.key``` is important here.
+```
+touch private.key
+```
+
+Now copy the private key. We have to paste it in ```private.key```. We can't use ```cat``` here because its for appending the data. Once we exit we won't be able to access the data. 
+```
+vim private.key
+```
+```vim``` is a text editor. It's used to read contents to the file. 
+
+Now press ```i``` to enter the insert mode and paste the private key. 
+
+To exit without saving press ```esc``` key and type ```:qa!```
+
+To save the content and exit press ```esc``` and type ```:wq```
+
+Now we need to open ```bandit17``` using this private key
+```
+ssh -i private.key bandit17@bandit.labs.overthewire.org -p 2220
+```
+We are in!!!
+
+But we might need the password for future. Every password is stored in ```/etc/bandit_pass/bandit<level_no>```. Access it using ```cat```
+
+Here's the password. Copy or store it somewhere to use later
+```
+VwOSWtCA7lRKkTfbr2IDh6awj9RNZM5e
 ```
 
 ---
