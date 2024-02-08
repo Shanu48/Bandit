@@ -573,6 +573,11 @@ NOTE: if you have solved this level and see ‘Byebye!’ when trying to log int
 
 #### Solution
 
+We simply need to find the one line that is different in both the files
+```
+diff passwords.new passwords.old
+```
+
 Here's the password. Copy or store it somewhere to use later
 ```
 hga5tuuCLF6fFzUpnagiMN8ssu9LFrdg
@@ -585,9 +590,21 @@ The password for the next level is stored in a file readme in the homedirectory.
 
 #### Solution
 
-Here's the password. Copy or store it somewhere to use later
+This time, the terminal won't allow us to enter. We need to force it to give us the info we need.
+
+Let's check what files we have.
+```
+ssh bandit18@bandit.labs.overthewire.org -p 2220 **ls**
 ```
 
+Now let's open ```readme``` as usual
+```
+ssh bandit18@bandit.labs.overthewire.org -p 2220 **cat readme**
+```
+
+Here's the password. Copy or store it somewhere to use later
+```
+awhqfNnAbc1naukrpqDYcF95h7HoMTrC
 ```
 
 ---
